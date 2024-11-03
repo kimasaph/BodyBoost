@@ -165,3 +165,9 @@ LOGGING = {
         },
     },
 }
+
+import logging
+logger = logging.getLogger(__name__)
+
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+logger.info(f"Message storage backend: {MESSAGE_STORAGE}")

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="english">
   <head>
-    <title>Forgot Password</title>
+    <title>Know More Success</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
@@ -114,74 +114,51 @@
     />
   </head>
   <body>
+    <link rel="stylesheet" href="{% static 'signupPage/css/style.css' %}">
     <div>
-      <link rel="stylesheet" href="/static/loginPage/css/forgotPassword.css" />
+      <link rel="stylesheet" href="{% static 'signupPage/css/knowMoreSuccess.css' %}">
 
       <div class="bacaltos-sign-up-page-container">
         <div class="bacaltos-sign-up-page-bacaltos-sign-up-page">
           <div class="bacaltos-sign-up-page-frame1">
             <div class="bacaltos-sign-up-page-frame3">
-              <span class="bacaltos-sign-up-page-text10">
-                <span>Or Login With:</span>
-              </span>
-              <img
-                alt="facebook114346"
-                src="/static/loginPage/images/facebook111326-lv3f-200h.png"
-                class="bacaltos-sign-up-page-facebook11"
-              />
-              <img
-                alt="apple14347"
-                src="/static/signupPage/images/apple14347-51f9-200h.png"
-                class="bacaltos-sign-up-page-apple1"
-              />
-              <img
-                alt="google24348"
-                src="/static/signupPage/images/google24348-flt9-200h.png"
-                class="bacaltos-sign-up-page-google2"
-              />
             </div>
             <div class="bacaltos-sign-up-page-frame2">
-              <img src="{% static 'signupPage/images/logopurple4350-j51-200h.png' %}" alt="logoPurple4350" class="bacaltos-sign-up-page-logo-purple">
-              
-              <form method="POST" action="{% url 'forgotPassword' %}">
-                {% csrf_token %}
-                <div class="bacaltos-sign-up-page-group2">
-                  <img alt="Line14351" src="{% static 'signupPage/images/line14351-6xxa.svg' %}" class="bacaltos-sign-up-page-line1" />
-
-                  <div class="input-email">
-                    {{ form.email }}
-                    <img src="{% static 'signupPage/images/account14357-oc4e-200h.png' %}" alt="account14357" class="bacaltos-sign-up-page-account1" />
-                    {% if form.email.errors %}
-                      <div class="form-errors">
-                        {% for error in form.email.errors %}
-                          {{ error }}
-                        {% endfor %}
-                      </div>
-                    {% endif %}
-                  </div>
-                </div>
-
-                <div class="bacaltos-sign-up-page-group1">
-                  <button type="submit" class="bacaltos-sign-up-page-rectangle2" style="border: none; padding: 0; background: none; cursor: pointer; width: 100%; height: 100%;">
-                    <img alt="Rectangle24358" src="{% static 'signupPage/images/rectangle24358-mj5o-200h.png' %}" class="bacaltos-sign-up-page-rectangle2" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;" />
-                    <div class="bacaltos-sign-up-page-text12" style="position: relative; z-index: 1;">Confirm</div>
-                  </button>
-                </div>
-              </form>
-              <a href="{% url 'login' %}">
+              <img
+                alt="logoPurple4350"
+                src="/static/signupPage/images/logopurple4350-j51-200h.png"
+                class="bacaltos-sign-up-page-logo-purple"
+              />
+              <div class="bacaltos-sign-up-page-group1">
+                <a href="{% url 'home' %}">
+                  <img
+                  src="/static/signupPage/images/rectangle24358-mj5o-200h.png"
+                  alt="Rectangle24358"
+                  class="bacaltos-sign-up-page-rectangle2"
+                />
+                  <div class="bacaltos-sign-up-page-text12">Home</div>
+                </a>
+              </div>
+              <div class="bacaltos-sign-up-page-group2">
+                <input
+                  type="text"
+                  placeholder="Now let's get to work."
+                  class="bacaltos-sign-up-page-text14"
+                />
+              </div>
+              <a href="{% url 'knowMore' %}">
                 <img
                 src="/static/signupPage/images/left-arrow1.png"
                 alt="leftarrow15487"
                 class="bacaltos-sign-up-page2-leftarrow1"
               />
-              </a>  
+              </a>              
               <span class="bacaltos-sign-up-page-text26">
-                <span>Forgot your Password?</span>
+                <span>Details Saved</span>
+                <br />
+                <span>Successfully!</span>
               </span>
             </div>
-            <span class="forgot-message">Enter your email address and we will</span>
-            <br />
-            <span class="forgot-message2">send you a link to reset your password</span> 
             <div class="bacaltos-sign-up-page-frame4">
               <img
                 src="/static/signupPage/images/screenshot20240828at100419pmremovebgpreview14361-zif-200h.png"

@@ -7,4 +7,5 @@ urlpatterns = [
     path('authentication/', views.authentication_view, name='authentication'),
     path('authenticationSuccess/', views.authenticationSuccess_view, name='authenticationSuccess'),
     path('knowMore/', views.knowMore_view, name='knowMore'),
+    path('knowMoreSuccess/', views.knowMoreSuccess_view, name='knowMoreSuccess'),
 ]
